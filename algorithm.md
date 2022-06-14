@@ -52,7 +52,7 @@
                 for index in range(len(data)):
                     if data[index] == 'M':
                         m_count += 1
-            print (m_count)
+            print(m_count)
 
 
 
@@ -104,4 +104,26 @@
             #data_queue.get() -> (5, 1)
             #data_queue.get() -> (10, 'korea')
 
-            
+
+    큐가 많이 쓰이는 곳
+
+    . 멀티 태스킹을 위한 프로세스 스케쥴링 방식을 구현하기 위해 많이 사용됨 (중요)
+
+
+        리스트 변수로 큐를 다루는 enqueue, dequeue 기능 구현 예시
+
+        1. queue_list = list()
+
+        def enqueue(data):
+            queue_list.append(data)
+        
+        def dequeue():
+            data = queue_list[0]
+            del queue_list[0]
+            return data
+
+        for index in range(10):
+            enqueue(index)
+
+            #len(queue_list) -> 10
+            #dequeue() -> 2
