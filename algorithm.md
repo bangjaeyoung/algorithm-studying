@@ -8,7 +8,6 @@
         배열, 스택, 큐, 링크드 리스트, 해쉬 테이블, 힙 등
 
 
-
 알고리즘이란?
 
     . 알고리즘, Algorithm
@@ -25,7 +24,6 @@
     . 파이썬에서 리스트 타입이 배열 기능임
 
 
-
     배열의 필요성
 
         . 같은 종류의 데이터를 효율적으로 관리
@@ -36,7 +34,6 @@
             미리 최대 길이를 지정해야 함
 
 
-
         #python
 
         1차원 배열 (리스트로 구현)
@@ -44,7 +41,6 @@
 
         2차원 배열 (리스트로 구현)
             data_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-
 
 
         프로그래밍 예제 (직접 푼 풀이만)
@@ -60,5 +56,52 @@
 
 
 
+2. 큐 (Queue)
+
+    큐의 구조
+    
+        . 가장 먼저 넣은 데이터를 가장 먼저 꺼낼 수 있는 데이터 구조
+        . FIFO(First-In, First-Out), LILO(Last-In, Last-Out), LIFO(Last-In, First-Out) 등의 형태도 존재함
 
 
+    알아둘 용어
+
+        . Enqueue : 큐에 데이터를 넣는 기능
+        . Dequeue : 큐에서 데이터를 꺼내는 기능
+
+
+    파이썬 queue 라이브러리 활용해서 큐 자료구조 사용하기
+
+        . Queue() : 가장 일반적인 큐 구조 (FIFO 구조)
+        . LifoQueue() : 나중에 입력된 데이터가 가장 먼저 출력되는 구조 (스택과 같은 구조)
+        . PriorityQueue() : 데이터에 우선순위를 지정해서, 우선순위대로 데이터를 출력하는 구조
+
+    
+        여러 큐 형태 중에 기본적인 Queue()로 큐 만들기
+        
+            import queue
+
+            data_queue = queue.Queue()
+            data_queue.put("ex")
+            data_queue.put(1)
+
+            #data_queue.qsize() -> 2
+            #data_queue.get() -> 'ex'
+            #data_queue.get() -> 1
+            #data_qsize() -> 0
+
+
+        여러 큐 형태 중에 기본적인 Queue()로 큐 만들기
+        
+            import queue
+
+            data_queue = queue.PriorityQueue()
+            data_queue.put((10, "korea"))               #가로 두 개인 이유는 튜플이기 때문
+            data_queue.put((5, 1))
+            data_queue.put((15, "china"))
+
+            #data_queue.qsize() -> 3
+            #data_queue.get() -> (5, 1)
+            #data_queue.get() -> (10, 'korea')
+
+            
