@@ -90,7 +90,7 @@
             #data_qsize() -> 0
 
 
-        여러 큐 형태 중에 기본적인 Queue()로 큐 만들기
+        여러 큐 형태 중에 기본적인 PriorityQueue()로 큐 만들기
         
             import queue
 
